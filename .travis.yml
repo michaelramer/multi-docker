@@ -26,14 +26,14 @@ after_success:
   - docker push michaelramer/multi-server
   - docker push michaelramer/multi-worker
  
- deploy;
-   provider: elacticbeanstalk
-   region: us-east-2
-   app: multi-docker
-   env: MultiDocker-env
-   bucket_name: elacticbeanstalk-us-east-2-602548364420
-   bucket_path: docker-multi
-   on:
-     branch: master
-   access_key_id: $AWS_ACCESS_KEY
-   secret_access_key: $AWS_SECRET_KEY
+deploy:
+ provider: elacticbeanstalk
+ region: us-east-2
+ app: multi-docker
+ env: MultiDocker-env
+ bucket_name: elacticbeanstalk-us-east-2-602548364420
+ bucket_path: docker-multi
+ on:
+   branch: master
+ access_key_id: $AWS_ACCESS_KEY
+ secret_access_key: $AWS_SECRET_KEY
