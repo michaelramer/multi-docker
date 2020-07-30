@@ -28,8 +28,7 @@ after_success:
  
 deploy:
  provider: elacticbeanstalk
- access_key_id: $AWS_ACCESS_KEY
- secret_access_key: $AWS_SECRET_KEY
+ 
  region: us-east-2
  app: multi-docker
  env: MultiDocker-env
@@ -37,5 +36,6 @@ deploy:
  bucket_path: docker-multi
  on:
    branch: master
- 
- #test run 9
+ access_key_id: "$AWS_ACCESS_KEY"
+ secret_access_key: "$AWS_SECRET_KEY"
+ #test run 10
