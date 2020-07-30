@@ -27,7 +27,6 @@ after_success:
   - docker push michaelramer/multi-worker
  
  deploy;
-   edge:true
    provider: elacticbeanstalk
    region: us-east-2
    app: multi-docker
